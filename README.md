@@ -2,8 +2,8 @@
 
 ## About
 
-Tarea de Asignatura - Programación Movil
-Autor: Jeremy Prieto
+- Tarea de Asignatura: Programación Movil
+- Autor: Jeremy Prieto
 
 ## Features
 
