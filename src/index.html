@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicStore Lab</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
     <link href="/dist/output.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body class="font-serif bg-gray-950">
     <div id="contenedor">
@@ -91,66 +90,161 @@
             </div>
         </div>
         
-        <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-1 lg:px-6">
-        
-            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <div class="text-gray-500 sm:text-lg dark:text-gray-300">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-300 dark:text-white">MusicStore LAB - 15 años de experiencia</h2>
-                    <p class="mb-8 font-light lg:text-xl">¿La música es su pasión, pasatiempo o vocación? El equipo de MUSIC STORE comparte su entusiasmo, ofreciendo instrumentos y productos de calidad para que pueda disfrutar al máximo de cualquier experiencia musical. Desde una púa hasta un sistema PA- con más de 55.000 
-                        artículos disponibles en nuestra tienda online, encontrará todo los productos que necesite para tocar, ensayar  y grabar.</p>
-                </div>
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex drop-shadow-xl" src="img/pexels-roman-odintsov-5855789.jpg"
-                    alt="dashboard feature image">
+        <!-- Component: Feature item with square icon and text -->
+        <div class="relative max-w-screen-xl mx-auto sm:flex sm:justify-between sm:items-start sm:flex-row flex-col items-center gap-4 py-12">
+            <div class="w-12 sm:w-auto flex items-center p-2 text-white rounded bg-orange-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6" aria-label="Dashboard icon" role="graphics-symbol">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
             </div>
-        
+            <div class="relative flex flex-col items-start justify-center w-full min-w-0 gap-0 text-base">
+                <p class="text-white"><strong class="font-medium text-orange-700">Amplio Catálogo:</strong> <br>Ofrecemos una amplia variedad de productos musicales, 
+                    desde instrumentos de alta calidad hasta equipos de grabación y accesorios. 
+                    Nuestro extenso catálogo garantiza que músicos de todos los 
+                    niveles encuentren lo que necesitan para expresar su creatividad y mejorar su experiencia musical.</p>
+            </div>
+            <div class="w-12 sm:w-auto flex items-center p-2 text-white rounded bg-orange-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6" aria-label="Dashboard icon" role="graphics-symbol">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+            </div>
+            <div class=" relative flex flex-col items-start justify-center w-full min-w-0 gap-0 text-base">
+                <p class="text-white"><strong class="font-medium text-orange-700"> Compra Segura:</strong><br>Priorizamos la seguridad de tus compras. 
+                    Implementamos un sistema de pago seguro que protege tus datos personales y financieros. 
+                    Puedes realizar tus transacciones con total confianza, 
+                    brindándote la tranquilidad necesaria para enfocarte en tu pasión por la música</p>
+            </div>
+            <div class="w-12 sm:w-auto flex items-center p-2 text-white rounded bg-orange-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6" aria-label="Dashboard icon" role="graphics-symbol">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+            </div>
+            <div class="relative flex flex-col items-start justify-center w-full min-w-0 gap-0 text-base">
+                <p class="text-white"><strong class="font-medium text-orange-700">Atención al Cliente:</strong> <br> WNuestro equipo está formado por apasionados de la música que están listos para ofrecerte asesoramiento especializado. 
+                    Ya sea que necesites ayuda para elegir el instrumento adecuado o tengas preguntas sobre equipos de sonido, 
+                    nuestro servicio de atención al cliente está aquí para brindarte el soporte necesario. Tu satisfacción es nuestra prioridad..</p>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-1 lg:px-6">
+            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+                <div class="text-gray-300 sm:text-lg dark:text-gray-300">
+                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-white dark:text-white">MusicStore LAB - 15 años
+                        de experiencia</h2>
+                    <p class="mb-8 font-light lg:text-xl">¿La música es su pasión, pasatiempo o vocación? El equipo de MUSIC
+                        STORE comparte su entusiasmo, ofreciendo instrumentos y productos de calidad para que pueda disfrutar al
+                        máximo de cualquier experiencia musical. Desde una púa hasta un sistema PA- con más de 55.000
+                        artículos disponibles en nuestra tienda online, encontrará todo los productos que necesite para tocar,
+                        ensayar y grabar.</p>
+                </div>
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex drop-shadow-xl"
+                    src="img/pexels-roman-odintsov-5855789.jpg" alt="dashboard feature image">
+            </div>
+            <!-- Quote -->
+            <figure class="pt-6 max-w-screen-md mx-auto flex flex-col items-center ">
+                <img class="h-7" src="img/double-quotes_b.png">
+                <blockquote>
+                    <p class="text-x1 font-medium text-orange-500 md:text-2xl dark:text-orange-500">"Sin música, la vida sería
+                        un error"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center  space-x-3">
+                    <div class="flex items-center divide-x-2 divide-gray-100 dark:divide-gray-100">
+                        <div class="pr-3 font-medium text-white dark:text-white">Friedrich Nietzsche</div>
+                        <div class="pl-3 text-sm font-light text-white dark:text-white">Filósofo</div>
+                    </div>
+                </figcaption>
+            </figure>
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="img/inspection.jpg" alt="feature image 2">
-                <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-black">Por qué comprar con nosotros?</h2>
-                    <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+                <div class="text-gray-300 sm:text-lg dark:text-gray-300">
+                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-white dark:text-white">Por qué comprar con
+                        nosotros?</h2>
+                    <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-200">
                         <li class="flex space-x-3">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-black">Empresa con experiencia en el mercado</span>
+                            
+                            <div class="flex items-center self-center text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-label="Analytics icon" role="graphics-symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium leading-tight ">Empresa con experiencia en el mercado</span>
                         </li>
                         <li class="flex space-x-3">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-black">Asesores expertos: te ayudamos a tomar la mejor decisión</span>
+                            <div class="flex items-center self-center text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-label="User icon" role="graphics-symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium leading-tight">Asesores expertos: te ayudamos a tomar la mejor
+                                decisión</span>
                         </li>
                         <li class="flex space-x-3">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-black">Paga con total seguridad: pasarela de pagos 100% segura</span>
+                            <div class="flex items-center self-center text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-label="Dashboard icon" role="graphics-symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium leading-tight">Paga con total seguridad: pasarela de pagos 100%
+                                segura</span>
                         </li>
                         <li class="flex space-x-3">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-black">Compra online y retira en tienda</span>
+                            <div class="flex items-center self-center text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-label="Cloud icon" role="graphics-symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium leading-tight">Compra online y retira en tienda</span>
                         </li>
                         <li class="flex space-x-3">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-b lack">Envíos a todo Ecuador</span>
+                            <div class="flex items-center self-center text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-label="Dashboard icon" role="graphics-symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium leading-tight">Envíos a todo Ecuador</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Quote -->
-        <figure class="pt-20 max-w-screen-md mx-auto flex flex-col items-center ">
-            <img class="h-7" src="img/double-quotes.png">
-            <blockquote>
-                <p class="text-x1 font-medium text-gray-900 md:text-2xl dark:text-blue-500">"Sin música, la vida sería un error"</p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center  space-x-3">
-                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <div class="pr-3 font-medium text-gray-900 dark:text-black">Friedrich Nietzsche</div>
-                    <div class="pl-3 text-sm font-light text-gray-500 dark:text-black">Filósofo</div>
-                </div>
-            </figcaption>
-        </figure>
-    
-        <div class="relative py-12">
-            <!-- Image -->
-            <img src="img/navidadimage.jpg" alt="Your Image" class="px-6 w-full h-auto">
-            <!-- Text -->
-            <div class=" -0 w-auto align-middle text-center text-white  dark:bg-blue-700">
-                <h2 class="text-3xl font-bold  ">APROVECHA LAS OFERTAS POR NAVIDAD <br> Hasta un 60% de descuento</h2>
+        <!-- Component: Carousel with indicators inside -->
+        <div class="relative w-auto glide-02 max-w-screen-xl mx-auto py-6">
+            <p class="pt-6 max-w-screen-md mx-auto flex flex-col items-center text-x1 font-medium text-orange-500 md:text-2xl dark:text-orange-500">Nuestras marcas</p>
+            <!-- Slides -->
+            <div class="overflow-hidden pt-6" data-glide-el="track">
+                <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                    <li><img src="img/marcas/db-Tech-logo.jpg" class="max-w-full max-h-full m-auto rounded-md" /></li>
+                    <li><img src="img/marcas/Epiphone.jpg" class=" max-w-full max-h-full m-auto rounded-md" /></li>
+                    <li><img src="img/marcas/Fender-logo.jpg" class=" max-w-full max-h-full m-auto rounded-md" /></li>
+                    <li><img src="img/marcas/Gibson-logo.jpg" class="max-w-full max-h-full m-auto rounded-md" /></li>
+                    <li><img src="img/marcas/Hamilton-logo.jpg" class=" max-w-full max-h-full m-auto rounded-md" /></li>
+                    <li><img src="img/marcas/primer-logo.jpg" class="max-w-full max-h-full m-auto rounded-md" /></li>
+                </ul>
             </div>
         </div>
 
+        <!-- Component: Dark Theme Footer -->
+        <footer class="text-slate-400 max-w-screen-xl mx-auto">
+            <div class="py-4 text-sm border-t border-slate-900 bg-slate-700">
+                <div class="container px-6 mx-auto">
+                    <div class="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                        <div class="col-span-2 md:col-span-4 lg:col-span-6">Copyright 2023 MusicStoreLab </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Dark Theme Footer -->
 
     </div>
 
@@ -158,14 +252,37 @@
         // JavaScript to toggle visibility
         const mobileTrigger = document.getElementById('mobile-trigger');
         const navLinks = document.getElementById('nav-links');
-
         mobileTrigger.addEventListener('click', () => {
             navLinks.classList.toggle('invisible');
             navLinks.classList.toggle('opacity-0');
             navLinks.classList.toggle('lg:visible');
             navLinks.classList.toggle('opacity-100');
         });
-
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    <script>
+        // JavaScript to carousel
+        var glide02 = new Glide('.glide-02', {
+            type: 'carousel',
+            focusAt: 'center',
+            perView: 5,
+            autoplay: 3500,
+            animationDuration: 700,
+            gap: 24,
+            classes: {
+                activeNav: '[&>*]:bg-slate-700',
+            },
+            breakpoints: {
+                1024: {
+                    perView: 2
+                },
+                640: {
+                    perView: 1
+                }
+            },
+        });
+        glide02.mount();
+    </script>
+
 </body>
 </html>
