@@ -6,44 +6,84 @@
     <title>MusicStore Lab</title>
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
-
+    <link rel="icon" href="favicon.ico">
 </head>
-<body class=" font-serif  bg-gray-100">
+<body class="font-serif  bg-gray-950">
     <div id="contenedor">
-        <header class="bg-blue-500 p-4 flex flex-wrap justify-between items-center max-w-screen-xl px-4 mx-auto">
-            <!-- Logo en la parte izquierda -->
-            <div class="flex items-center">
-                <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-2">
-                <span class="text-white text-lg font-bold">MusicStore Lab</span>
-            </div>
-            <!-- Enlaces a Subpágina -->
-            <nav class="space-x-4">
-                <a href="index.html" class="text-white">Inicio</a>
-                <a href="instruments.html" class="text-white">Instrumentos</a>
-                <a href="#" class="text-black">Accesorios</a>
-                <a href="faq.html" class="text-white">Preguntas Frecuentes</a>
-                <a href="about.html" class="text-white">Nosotros</a>
-            </nav>
-            <!-- Botón Inicio/Registrarse en la parte derecha superior -->
-            <div class="flex items-center space-x-2">
-                <button class="bg-white text-blue-500 px-4 py-2 rounded-full">Inicio</button>
-                <button class="bg-white text-blue-500 px-4 py-2 rounded-full">Registrarse</button>
-                <button class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                    <img src="img/search.png" class="w-10"> 
-                </button>
-            </div>
-            <!-- Botón de búsqueda en la esquina inferior derecha -->
+        <header
+        class="sticky top-0 z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-black/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden max-w-screen-xl mx-auto">
+            <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+                <nav aria-label="main navigation"
+                    class="flex h-[5.5rem] items-stretch justify-between font-medium text-white" role="navigation">
+                    <!-- Brand logo -->
+                    <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                        class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
+                        href="index.html">
+                        <img src="img/logo_w1.png" alt="Logo" class="h-12 w-12 sm:h sm:h-20 sm:w-20">
+                        MusicStore Lab
+                    </a>
+                    <!-- Mobile trigger -->
+                    <button  id="mobile-trigger" class="relative self-center order-10 visible block w-10 h-10 opacity-100 lg:hidden"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-white transition-all duration-300"></span>
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-6 transform rounded-full bg-white transition duration-300"></span>
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-white transition-all duration-300"></span>
+                        </div>
+                    </button>
+                    <!-- Navigation links -->
+                    <ul id="nav-links" role="menubar" aria-label="Select page"
+                        class="invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-black/90 px-8 pb-12 pt-28 font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-current="page" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300  hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="index.html"> <span>Inicio</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="instruments.html"> <span>Instrumentos</span></a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300  text-orange-500 hover:text-orange-600 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="accessories.html"> <span>Accesorios</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="faq.html"> <span>Ayuda</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="about.html"> <span>Nosotros</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <div class="flex items-center px-6 py-1 ml-0 lg:ml-0 lg:p-1">
+                                <button onclick="redirectToLoginPage()"
+                                    class="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-orange-500 shadow-orange-500 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 focus:bg-orange-700 focus:shadow-sm focus:shadow-orange-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-orange-300 disabled:bg-orange-300 disabled:shadow-none">
+                                    <span>Login</span>
+                                </button>
+                            </div>
+                        </li>  
+                    </ul>
 
-        </header>
-        
+                </nav>
+            </div>
+        </header> 
+        <!--END NAVBAR-->
         <!-- Navigation Bar -->
-        <nav class="bg-blue-400 p-4 max-w-screen-xl px-4 mx-auto text-white">
+        <nav class="bg-orange-800 p-4 max-w-screen-xl px-4 mx-auto text-white">
             <ul class="flex space-x-4">
-                <li><a href="#" class="hover:underline  text-black">Amp. y Pedales </a></li>
-                <li><a href="soon.html" class="hover:underline">Soportes</a></li>
-                <li><a href="soon.html" class="hover:underline">Audio y DJ</a></li>          
-                <li><a href="soon.html" class="hover:underline">Cables y Adaptadores</a></li>
-                <li><a href="soon.html" class="hover:underline">Otros</a></li>
+                <li><a href="#" class="hover:text-white  text-black">Amp. y Pedales </a></li>
+                <li><a href="soon.html" class="hover:text-black">Soportes</a></li>
+                <li><a href="soon.html" class="hover:text-black">Audio y DJ</a></li>          
+                <li><a href="soon.html" class="hover:text-black">Cables y Adaptadores</a></li>
+                <li><a href="soon.html" class="hover:textblack">Otros</a></li>
             </ul>
         </nav>
 
@@ -51,61 +91,123 @@
         <div class="container mx-auto mt-8 flex flex-wrap justify-around">
 
             <!-- Product Card 1 -->
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/amp1.jpg" alt="Guitar" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">KURZWEIL KAC40</h2>
-                    <p class="text-gray-700">Amplificador portátil<br> $353.00</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">KURZWEIL KAC40</h2>
+                    <p class="text-white">Amplificador portátil<br> $353.00</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div>
 
             <!-- Product Card 2 -->
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/mic1.jpg" alt="Drums" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">AUDIX SOPORTE</h2>
-                    <p class="text-gray-700">Ajuste de tensión<br>$62.00</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">AUDIX SOPORTE</h2>
+                    <p class="text-white">Ajuste de tensión<br>$62.00</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div>
 
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/amp2.jpg" alt="Drums" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">Cinco-12AX7</h2>
-                    <p class="text-gray-700">Preamplificador<br>$1269.00</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">Cinco-12AX7</h2>
+                    <p class="text-white">Preamplificador<br>$1269.00</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div>
 
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/pedal1.png" alt="Drums" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">Nux MG300</h2>
-                    <p class="text-gray-700">Pedal Multiefecto<br><del>$229 </del>$199.00</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">Nux MG300</h2>
+                    <p class="text-white">Pedal Multiefecto<br>$199.00</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div> 
 
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/pedal2.png" alt="Drums" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">TWO STROKE PEDAL</h2>
-                    <p class="text-gray-700">REFUERZO LIMPIO DE 12DB<br>$199.00</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">TWO STROKE PEDAL</h2>
+                    <p class="text-white">REFUERZO LIMPIO DE 12DB<br>$199.00</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div>
 
-            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden m-4">
+            <div class="max-w-sm bg-black shadow-lg rounded-lg overflow-hidden m-4">
                 <img src="img/banjo1.jpg" alt="Drums" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2">ORANGE FS-1 MINI PEDAL</h2>
-                    <p class="text-gray-700"><del>$35.00 </del>$28.24</p>
-                    <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
+                    <h2 class="text-xl font-bold mb-2 text-white">ORANGE FS-1 MINI PEDAL</h2>
+                    <p class="text-white">$28.24</p>
+                    <button class="mt-2 bg-orange-500 text-white px-4 py-2 rounded-full">Añadir al carro</button>
                 </div>
             </div>
+        </div>
+        <!-- Component: Minimal basic pagination with icons and text -->
+        <nav role="navigation" aria-label="Pagination Navigation" class="hidden">
+            <ul class="flex items-center justify-center text-sm list-none md:gap-1 text-slate-700 pb-6">
+                <li>
+                    <a href="javascript:void(0)" aria-label="Goto Page 1"
+                        class="inline-flex items-center justify-center h-10 gap-4 px-4 text-sm font-medium transition duration-300 rounded focus-visible:outline-none stroke-white text-white hover:bg-emerald-50 hover:text-orange-500 hover:stroke-orange-500 focus:bg-emerald-50 focus:text-orange-600 focus:stroke-orange-600"><span
+                            class="order-2">Prev</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 -mx-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.5" role="graphics-symbol" aria-labelledby="title-09 desc-09">
+                            <title id="title-09">Previous page</title>
+                            <desc id="desc-09">link to previous page</desc>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:void(0)" aria-label="Goto Page 3"
+                        class="inline-flex items-center justify-center h-10 gap-4 px-4 text-sm font-medium transition duration-300 rounded focus-visible:outline-none stroke-white text-white hover:bg-emerald-50 hover:text-orange-500 hover:stroke-orange-500 focus:bg-emerald-50 focus:text-orange-600 focus:stroke-orange-600"><span>Next
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 -mx-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.5" role="graphics-symbol" aria-labelledby="title-10 desc-10">
+                            <title id="title-10">Next page</title>
+                            <desc id="desc-10">link to next page</desc>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Minimal basic pagination with icons and text -->
+
+        <!-- Component: Dark Theme Footer -->
+        <footer class="text-slate-400 max-w-screen-xl mx-auto">
+            <div class="py-4 text-sm border-t border-slate-900 bg-slate-700">
+                <div class="container px-6 mx-auto">
+                    <div class="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                        <div class="col-span-2 md:col-span-4 lg:col-span-6">Copyright 2023 MusicStoreLab </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Dark Theme Footer -->
 
     </div>
+    <script>
+        // JavaScript to toggle visibility
+        const mobileTrigger = document.getElementById('mobile-trigger');
+        const navLinks = document.getElementById('nav-links');
+        mobileTrigger.addEventListener('click', () => {
+            navLinks.classList.toggle('invisible');
+            navLinks.classList.toggle('opacity-0');
+            navLinks.classList.toggle('lg:visible');
+            navLinks.classList.toggle('opacity-100');
+        });
+    </script>
+    <script>
+        function redirectToLoginPage() {
+            // Reemplaza "/ruta-de-tu-pagina-de-login" con la ruta correcta
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>

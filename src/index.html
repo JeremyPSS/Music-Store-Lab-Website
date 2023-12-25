@@ -19,7 +19,7 @@
                     <!-- Brand logo -->
                     <a id="WindUI" aria-label="WindUI logo" aria-current="page"
                         class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
-                        href="javascript:void(0)">
+                        href="index.html">
                         <img src="img/logo_w1.png" alt="Logo" class="h-12 w-12 sm:h sm:h-20 sm:w-20">
                         MusicStore Lab
                     </a>
@@ -65,7 +65,7 @@
                         </li>
                         <li role="none" class="flex items-stretch">
                             <div class="flex items-center px-6 py-1 ml-0 lg:ml-0 lg:p-1">
-                                <button
+                                <button onclick="redirectToLoginPage()"
                                     class="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-orange-500 shadow-orange-500 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 focus:bg-orange-700 focus:shadow-sm focus:shadow-orange-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-orange-300 disabled:bg-orange-300 disabled:shadow-none">
                                     <span>Login</span>
                                 </button>
@@ -282,6 +282,13 @@
             },
         });
         glide02.mount();
+    </script>
+
+    <script>
+        function redirectToLoginPage() {
+            // Reemplaza "/ruta-de-tu-pagina-de-login" con la ruta correcta
+            window.location.href = "login.html";
+        }
     </script>
 
 </body>
