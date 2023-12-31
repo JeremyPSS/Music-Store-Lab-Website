@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicStore Lab</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
+    <script type="module" src="conexion.js"></script>    
+    <script type="module" src="products.js"></script>
+</head>
+
+<body class=" font-serif  bg-gray-950">
+    <div id="contenedor">
+        <!--NAVBAR-->
+        <header
+            class="sticky top-0 z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-black/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden max-w-screen-xl mx-auto">
+            <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+                <nav aria-label="main navigation"
+                    class="flex h-[5.5rem] items-stretch justify-between font-medium text-white" role="navigation">
+                    <!-- Brand logo -->
+                    <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                        class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
+                        href="index.html">
+                        <img src="img/logo_w1.png" alt="Logo" class="h-12 w-12 sm:h sm:h-20 sm:w-20">
+                        MusicStore Lab
+                    </a>
+                    <div class="flex items-center flex-auto">
+                        <p class="text-white text-xl font-bold">Administrar</p>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <!--END NAVBAR-->
+        
+        <main id="container-main"></main>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,96 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
 
 </head>
-<body class=" font-serif  bg-gray-100">
+
+<body class=" font-serif  bg-gray-950">
     <div id="contenedor">
-        <header class="bg-blue-500 p-4 flex flex-wrap justify-between items-center max-w-screen-xl px-4 mx-auto">
-            <!-- Logo en la parte izquierda -->
-            <div class="flex items-center">
-                <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-2">
-                <span class="text-white text-lg font-bold">MusicStore Lab</span>
-            </div>
-            <!-- Enlaces a Subpágina -->
-            <nav class="space-x-4">
-                <a href="index.html" class="text-white">Inicio</a>
-                <a href="instruments.html" class="text-white">Instrumentos</a>
-                <a href="accessories.html" class="text-white">Accesorios</a>
-                <a href="faq.html" class="text-white">Preguntas Frecuentes</a>
-                <a href="about.html" class="text-white">Nosotros</a>
-            </nav>
-            <!-- Botón Inicio/Registrarse en la parte derecha superior -->
-            <div class="flex items-center space-x-2">
-                <button class="bg-white text-blue-500 px-4 py-2 rounded-full">Inicio</button>
-                <button class="bg-white text-blue-500 px-4 py-2 rounded-full">Registrarse</button>
-                <button class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                    <img src="img/search.png" class="w-10"> 
-                </button>
+        <!--NAVBAR-->
+        <header
+            class="sticky top-0 z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-black/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden max-w-screen-xl mx-auto">
+            <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+                <nav aria-label="main navigation"
+                    class="flex h-[5.5rem] items-stretch justify-between font-medium text-white" role="navigation">
+                    <!-- Brand logo -->
+                    <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                        class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
+                        href="index.html">
+                        <img src="img/logo_w1.png" alt="Logo" class="h-12 w-12 sm:h sm:h-20 sm:w-20">
+                        MusicStore Lab
+                    </a>
+                    <!-- Mobile trigger -->
+                    <button id="mobile-trigger"
+                        class="relative self-center order-10 visible block w-10 h-10 opacity-100 lg:hidden"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-white transition-all duration-300"></span>
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-6 transform rounded-full bg-white transition duration-300"></span>
+                            <span aria-hidden="true"
+                                class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-white transition-all duration-300"></span>
+                        </div>
+                    </button>
+                    <!-- Navigation links -->
+                    <ul id="nav-links" role="menubar" aria-label="Select page"
+                        class="invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-black/90 px-8 pb-12 pt-28 font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-current="page" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="index.html"> <span>Inicio</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="instruments.html"> <span>Instrumentos</span></a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="accessories.html"> <span>Accesorios</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="faq.html"> <span>Ayuda</span> </a>
+                        </li>
+                        <li role="none" class="flex items-stretch">
+                            <a role="menuitem" aria-haspopup="false"
+                                class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-orange-500 focus:text-orange-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                                href="about.html"> <span>Nosotros</span> </a>
+                        </li>
+                    </ul>
+
+                </nav>
             </div>
         </header>
-            <!-- component -->
-            <div class="relative flex items-top justify-center min-h-screen bg-black dark:bg-white sm:items-center sm:pt-0">
-                <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-                    <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
-                        <div class="px-4 text-lg text-black border-r border-black tracking-wider">
-                            Próximamente
-                        </div>
-                        <div class="ml-4 text-lg text-black uppercase tracking-wider  ">
-                            MusicStore Lab
-                        </div>
+        <!--END NAVBAR-->
+
+        <!-- component -->
+        <div class="relative flex items-top justify-center min-h-scree sm:items-center sm:pt-32 pt-0">
+            <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+                <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
+                    <div class="px-4 text-lg text-white border-r border-white tracking-wider">
+                        Próximamente
+                    </div>
+                    <div class="ml-4 text-lg text-white uppercase tracking-wider  ">
+                        MusicStore Lab
                     </div>
                 </div>
             </div>
+        </div>
 
     </div>
+    <script>
+        // JavaScript to toggle visibility
+        const mobileTrigger = document.getElementById('mobile-trigger');
+        const navLinks = document.getElementById('nav-links');
+        mobileTrigger.addEventListener('click', () => {
+            navLinks.classList.toggle('invisible');
+            navLinks.classList.toggle('opacity-0');
+            navLinks.classList.toggle('lg:visible');
+            navLinks.classList.toggle('opacity-100');
+        });
+    </script>
 </body>
+
 </html>

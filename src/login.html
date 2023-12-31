@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,18 @@
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
     <link rel="icon" href="favicon.ico">
+    <script type="module" src="login.js"></script>
+    <script type="module" src="conexion.js"></script>
 </head>
+
 <body class="font-serif bg-gray-950">
     <div id="contenedor">
         <!--NAVBAR-->
         <header
             class="sticky top-0 z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-black/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden max-w-screen-xl mx-auto">
             <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
-                <nav aria-label="main navigation" class="flex h-[5.5rem] items-stretch justify-between font-medium text-white"
-                    role="navigation">
+                <nav aria-label="main navigation"
+                    class="flex h-[5.5rem] items-stretch justify-between font-medium text-white" role="navigation">
                     <!-- Brand logo -->
                     <a id="WindUI" aria-label="WindUI logo" aria-current="page"
                         class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
@@ -65,54 +69,57 @@
                                 href="about.html"> <span>Nosotros</span> </a>
                         </li>
                     </ul>
-        
+
                 </nav>
             </div>
         </header>
         <!--END NAVBAR-->
-        
+
         <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
             <div class="relative py-3 sm:max-w-xl sm:mx-auto">
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500:opacity-100 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
                 </div>
                 <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-        
+
                     <div class="max-w-md mx-auto">
                         <div>
                             <h1 class="text-2xl font-semibold">Login</h1>
                         </div>
-                        <div class="divide-y divide-gray-200">
-                            <div class="py-8 text-base leading-6 space-y-4 text-black sm:text-lg sm:leading-7">
-                                <div class="relative">
-                                    <input autocomplete="off" id="email" name="email" type="text"
-                                        class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-black focus:outline-none focus:borer-rose-600"
-                                        placeholder="Email address" />
-                                    <label for="email"
-                                        class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email
-                                        Address</label>
-                                </div>
-                                <div class="relative">
-                                    <input autocomplete="off" id="password" name="password" type="password"
-                                        class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                                        placeholder="Password" />
-                                    <label for="password"
-                                        class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
-                                </div>
-                                <div class="relative">
-                                    <button class="bg-orange-500 text-white rounded-md px-2 py-1 hover:bg-white hover:text-orange-500">Iniciar</button>
+                        <form id="loginForm">
+                            <div class="divide-y divide-gray-200">
+                                <div class="py-8 text-base leading-6 space-y-4 text-black sm:text-lg sm:leading-7">
+                                    <div class="relative">
+                                        <input autocomplete="off" id="email" name="email" type="text"
+                                            class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-black focus:outline-none focus:borer-rose-600"
+                                            placeholder="Email address" />
+                                        <label for="email"
+                                            class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email
+                                            Address</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input autocomplete="off" id="password" name="password" type="password"
+                                            class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                                            placeholder="Password" />
+                                        <label for="password"
+                                            class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="submit"
+                                            class="bg-orange-500 text-white rounded-md px-2 py-1 hover:bg-white hover:text-orange-500">Iniciar</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-        
+
                     <div class="w-full flex justify-center">
                         <button onclick="redirectToSignupPage()"
                             class="flex items-center bg-black border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                             <span>Registrarse</span>
                         </button>
                     </div>
-        
+
                 </div>
             </div>
         </div>
@@ -123,7 +130,7 @@
                 <div class="container px-6 mx-auto">
                     <div class="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
                         <div class="col-span-2 md:col-span-4 lg:col-span-6">Copyright 2023 MusicStoreLab </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -168,13 +175,14 @@
         glide02.mount();
     </script>
 
-<script>
-    function redirectToSignupPage() {
-        // Reemplaza "/ruta-de-tu-pagina-de-login" con la ruta correcta
-        window.location.href = "signup.html";
-    }
+    <script>
+        function redirectToSignupPage() {
+            // Reemplaza "/ruta-de-tu-pagina-de-login" con la ruta correcta
+            window.location.href = "signup.html";
+        }
 
-</script>
+    </script>
 
 </body>
+
 </html>

@@ -7,6 +7,7 @@
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap">
     <link rel="icon" href="favicon.ico">
+    <script type="module" src="conexion.js"></script>
 </head>
 <body class="font-serif bg-gray-950">
     <div id="contenedor">
@@ -64,8 +65,8 @@
                                 href="about.html"> <span>Nosotros</span> </a>
                         </li>
                         <li role="none" class="flex items-stretch">
-                            <div class="flex items-center px-6 py-1 ml-0 lg:ml-0 lg:p-1">
-                                <button onclick="redirectToLoginPage()"
+                            <div id="userStatus" class="flex items-center px-6 py-1 ml-0 lg:ml-0 lg:p-1">
+                                <button id="btnLogin" onclick="redirectToLoginPage()"
                                     class="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-orange-500 shadow-orange-500 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 focus:bg-orange-700 focus:shadow-sm focus:shadow-orange-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-orange-300 disabled:bg-orange-300 disabled:shadow-none">
                                     <span>Login</span>
                                 </button>
