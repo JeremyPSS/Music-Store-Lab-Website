@@ -29,16 +29,44 @@
                     <div class="flex items-center flex-auto">
                         <p class="text-white text-xl font-bold">Administrar</p>
                     </div>
-
+                    <ul id="nav-links" role="menubar" aria-label="Select page"
+                        class="invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-black/90 px-8 pb-12 pt-28 font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                        <div  class="flex items-center px-6 py-1 ml-0 lg:ml-0 lg:p-1">
+                            <button onclick="redirectBackToHome()"
+                                class="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-orange-500 shadow-orange-500 hover:bg-orange-600 hover:shadow-sm hover:shadow-orange-200 focus:bg-orange-700 focus:shadow-sm focus:shadow-orange-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-orange-300 disabled:bg-orange-300 disabled:shadow-none">
+                                <span>ATRAS</span>
+                            </button>
+                        </div>
+                    </ul>
                 </nav>
             </div>
         </header>
         <!--END NAVBAR-->
-        
-        <main id="container-main"></main>
+
+        <!--BOTON DE AÑADIR-->
+        <div class="container mx-auto mt-4 flex flex-wrap justify-around">
+            <div onclick="redirectToAddProduct()" id="adminStatus" class="max-w-screen-md mx-auto flex flex-col items-center">
+                <button onclick="redirectToRegProduct()" id="adminbtn" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-full">Añadir</button>
+            </div>
+        </div>   
+        <!--Dinamic Content-->
+        <main id="container-main" class="container mx-auto mt-4 flex flex-wrap justify-around" ></main>
 
 
     </div>
-</body>
 
+    <script>
+        function redirectBackToHome() {
+            window.location.href = "instruments.html";
+        }
+
+        function redirectToAddProduct(){
+            window.location.href = "products_reg.html";
+        }
+
+    </script>
+
+
+
+</body>
 </html>

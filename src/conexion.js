@@ -17,6 +17,8 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 const auth = getAuth(app);
 
+const dbRef = collection(db,"instrumentos");
+
 export class Users {
     addPersona(firstName, lastName, email, password) {
         createUserWithEmailAndPassword(auth, email, password)
@@ -47,7 +49,7 @@ export class Users {
         signInWithEmailAndPassword(auth, email, password)
             .then((_) => {
                 window.location.href = "instruments.html";             
-                alert("¡Inicio de sesión exitoso!", "Bienvenido de nuevo.");
+                alert("¡Inicio de sesión exitoso!", "AHORA PUEDE ADMINISTRAR en la pestaña Instrumentos!!!!!.");
                 
             })
             .catch((error) => {
@@ -76,10 +78,16 @@ const userStatusDiv = document.getElementById('userStatus');
 const adminStatusDiv = document.getElementById('adminStatus');
 
 //observador de autenticacion para manejar cambios en el estado del usuario
+
 auth.onAuthStateChanged((user) => {
+
     //Limpia el contenido actual del elemento
     userStatusDiv.innerHTML = '';
-    adminStatusDiv.innerHTML = '';
+
+    //adminStatusDiv es vacio en el resto de paginas, ya que no esta deeclarado ese div
+    if (adminStatusDiv !== null) {
+        adminStatusDiv.innerHTML = '';
+    }
 
     //si el usuario esta autenticado, muestra "Cerrar sesión" y un mensaje de bienvenida
     if(user){
@@ -89,14 +97,17 @@ auth.onAuthStateChanged((user) => {
                                 </button>
         `;
 
-        adminStatusDiv.innerHTML = `<button id="adminbtn" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-full">ADMINISTRAR</button>
-        `;
+        //adminStatusDiv es vacio en el resto de paginas, ya que no esta deeclarado ese div
+        if (adminStatusDiv !== null) {
+            adminStatusDiv.innerHTML = `<button id="adminbtn" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-full">ADMINISTRAR</button>
+            `;
+        }
 
         //Asocia el evento de clicl del botón de cierre de session
         const signOutBtn = document.getElementById('signOutBtn')
         signOutBtn.addEventListener('click', () => {
             new Users().signOut();
-            console.log("Holis");
+            //console.log("Holis");
             redirectToLoginPage();
         });
 
@@ -116,3 +127,70 @@ auth.onAuthStateChanged((user) => {
 
 });
 
+//AGREGAR PRODUCTOS
+document.addEventListener('DOMContentLoaded', function () {
+    //leemos el fomulario de registro de producto
+    var formulario = document.getElementById('aggProducto');
+
+    formulario.addEventListener('submit', async  function (e) {
+        e.preventDefault();
+
+        var nombre = formulario.querySelector('#inputnombre').value;
+        var descripcion = formulario.querySelector('#inputdescripcion').value;
+        var img = formulario.querySelector('#inputimage').value;
+        var precio = formulario.querySelector('#inputprecio').value;
+        if (inputimage && inputimage.files.length > 0) {
+            try {
+                const file = inputimage.files[0];
+                const fileName = file.name;
+                const storageRef = ref(storage, `imagenes/${fileName}`);
+                await uploadBytes(storageRef, file);
+                const downloadURL = await getDownloadURL(storageRef);
+                const data = {
+                    nombre: nombre || "",
+                    descripcion: descripcion || "",
+                    imagen: downloadURL || "",
+                    precio: precio || ""
+                };
+                await addDoc(dbRef, data)
+                    .then(docRef => {
+                        console.log("Insertado exitosamente");
+                        window.location.href = 'admin.html';
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            } catch (error) {
+                console.log(error);
+                alert('Error al subir la imagen');
+            };
+
+        } else {
+            alert('Seleccione una imagen');
+        }
+
+    });
+});
+
+
+
+//ELIMINAR PRODUCTO
+document.addEventListener('DOMContentLoaded', async function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productoid = urlParams.get('id');
+    //const productoRef = doc(db, 'instrumentos', productoid);
+    const formularioo1 = document.getElementById('eliminar');
+    formularioo1.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const productoRef = doc(db, 'instrumentos', productoid);
+        deleteDoc(productoRef)
+            .then(() => {
+                console.log('Eliminado');
+                window.location.href = 'admin.html';
+                //console.log(productoRef,productoid);
+            })
+            .catch((error) => {
+                console.error('Error', error);
+            });
+    });
+});
